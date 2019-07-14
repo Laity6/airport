@@ -1,0 +1,25 @@
+create table airport(
+	id int(10) primary key auto_increment,
+	portname varchar(20),
+	cityname varchar(20)
+)
+
+create table airplane(
+	id int(10) primary key auto_increment,
+	airno varchar(20),
+	time int(5) comment '单位分钟',
+	price double,
+	takeid int(10) comment '起飞机场',
+	landid int(10) comment '降落机场'
+)
+
+insert into airport values(default,'首都机场','北京');
+insert into airport values(default,'南苑机场','北京');
+insert into airport values(default,'虹桥机场','上海');
+insert into airport values(default,'浦东国际机场','上海');
+insert into airport values(default,'流亭机场','青岛');
+
+insert into airplane values(default,'波音737',399,500,1,4);
+insert into airplane values(default,'中客',399,500,1,5);
+insert into airplane values(default,'波音737',120,200,2,4);
+insert into airplane values(default,'波音737',150,345.89,4,3);
